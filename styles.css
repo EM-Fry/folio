@@ -21,7 +21,7 @@ body {
 
 
 
-#page{
+#page {
     margin: 2rem;
     width: 800px;
     background-color: rgb(174, 174, 187);
@@ -34,7 +34,30 @@ body {
     }
 }
 
-#pageheader{
+.projectBox {
+    display: flex;
+    margin: 1rem 1rem;
+}
+
+.tile{
+    display: flex;
+    width: 170px;
+    margin: 2px;
+    /* border: thin black; */
+    background-color: black;
+    & :hover{
+        opacity: 0.5;
+    }
+}
+
+.image {
+    width: 100%;
+    /* backface-visibility: hidden; */
+}
+
+
+
+#pageheader {
     margin: -2rem;
     margin-bottom: 2rem;
     padding: 1rem 1rem 1rem 1rem;
