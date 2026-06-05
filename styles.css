@@ -2,12 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Chicle";
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 3px; 
-    overflow: hidden;
-    color: whitesmoke;
+    /* color: rgb(225, 225, 225); */
     /* border: 1px dashed black; */
 }
 
@@ -18,124 +13,78 @@ html, body{
 }
 
 body {
-    /* background-color: skyblue; */
     display: flex;
     justify-content: center;
+    /* align-items: center; */
+}
+
+
+
+
+#page{
+    margin: 2rem;
+    width: 800px;
+    background-color: rgb(174, 174, 187);
+    outline: medium solid rgb(100, 100, 100);
+    padding: 2rem;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    & h2{
+        text-align: center;
+    }
+}
+
+#pageheader{
+    margin: -2rem;
+    margin-bottom: 2rem;
+    padding: 1rem 1rem 1rem 1rem;
+
+    width: 800px;
+    min-height: 6rem;
+    background-color: black;
     align-items: center;
+    display: flex;
+    font-family: "Chicle";
+
+    & * {
+        /* flex: 1; */
+        /* border: thin solid rgb(100,100,100,0.4); */
+        color: rgb(159, 159, 209);
+        text-align: center;
+        /* width: 15%; */
+        padding: 0 4rem;
+        font-family: "Chicle";
+        letter-spacing: 0.1em; 
+    }
+    
+}
+
+#pageheader h1{
+    color: rgb(150, 150, 255);
+    font-style: italic;
+    /* width: 20%; */
+    padding: 0 4rem 0 1rem;
+    /* flex: 3; */
+}
+
+/* #pageheader{} */
+
+
+
+#backdrop{
+    position: fixed;
+    z-index: -1;
+    background-color: #171e3d;    
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 
 @keyframes twillight {
-    0% {background-color: #5c7aff;}
+    0% {background-color: #1e274d;}
     /* 50% {background-color: #FFB226;} */
-    100% {background-color: #675cff;}
+    100% {background-color: rgb(255, 165, 92);}
 
-}
-#backdrop{
-    position: fixed;
-    z-index: 0;
-    background-color: #5c7aff;
-    height: 100vh;
-    width: 100%;
-}
-
-
-#linkBox {
-    width: 400px;
-    /* border: 1px black solid; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-}
-
-
-.link {
-    font-family: 'Chicle';
-    margin: 10px auto;
-    max-width: 200px;
-    max-height: 40px;
-    /* border: 1px dashed black; */
-    color: whitesmoke;
-    font-size: 30px;
-    text-decoration: none;
-    text-decoration-color: rgb(166, 196, 231);
-    transition: all 0.2s ease-in-out;
-    z-index: 11;
-}
-
-#aboutBox{
-    max-width: 400px;
-    min-width: 200px;
-    /* border: 1px dashed black; */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: visible;
-    z-index: 10;
-}
-
-#aboutText{
-    width: 200px;
-    /* border: 1px dotted black; */
-    overflow: visible;
-}
-
-.info{
-    font-family: "Anaheim";
-    font-size: 17px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    opacity: 0;
-    max-height: 0;
-    margin: 0px auto;
-    width: 100%;
-    /* border: 1px dashed black; */
-    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
-    z-index: 11;
-    overflow: visible;
-}
-
-#whoami{
-    font-weight: 500;
-    letter-spacing: 0px;
-    text-decoration-line: underline;
-    text-decoration-style: dashed;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
-}
-
-#projectsBox {
-    width: 200px;
-    max-height: 40px;
-    /* border: 1px dashed black; */
-    display: flex;
-    flex-direction: column;
-    transition: opacity 0.4s ease-in-out, max-height 0.5s ease-in-out, color 0.2s ease-in-out;
-    overflow: visible;
-    z-index: 10;
-}
-
-.hiddenLink {
-    font-family: 'Anaheim';
-    font-size: 20px;
-    font-weight: 500;    
-    /* border: 1px dashed black; */
-    opacity: 0;
-    max-height: 0;
-    margin: 10px auto;
-    padding-left: 20px;
-    width: 100%;
-    /* ^^ Changing width to 100% will keep left justified, otherwise remove left padding = centered */
-    overflow: hidden;
-    text-decoration: none;
-    transition: opacity 0.2s ease-in-out, max-height 0.5s ease-in-out;
-    z-index: 11;
-}
-
-#project1{
-    margin-top: 12px;
 }
 
 input{
@@ -151,46 +100,7 @@ input:checked ~ #backdrop{
     animation-timing-function: linear;
 }
 
-#aboutToggle:checked ~ 
-#linkBox .info{
-    opacity: 1;
-    max-height: 200px;
-    overflow: visible;
-}
 
-#projectsToggle:checked ~ 
-#linkBox #projectsBox{
-    max-height: 200px;
-}
-
-#projectsToggle:checked ~ 
-#linkBox .hiddenLink{
-    opacity: 1;
-    max-height: 20px;
-    overflow: visible;
-    /* padding-top: 4px; */
-}
-@media (pointer: fine) {
-    .hiddenLink:hover,
-    .link:hover {
-        color: rgb(0, 2, 102);
-        text-decoration-color: rgb(0, 2, 102);
-    }
-}
-
-@media (pointer: coarse) {
-    #aboutToggle:checked ~ #linkBox #aboutText{
-        color: rgb(0, 2, 102);
-    }
-    #projectsToggle:checked ~ #linkBox #projectsBox{
-        color: rgb(0, 2, 102);
-    }
-}
-
-/* 
-#aboutToggle:checked ~ #linkBox #aboutText{
-    color: rgb(0, 2, 102);
-} */
 
 @keyframes drift {
     0% {
@@ -227,7 +137,7 @@ input:checked ~ #backdrop{
     /* background-color: aliceblue; */
     /* border: black solid ; */
     /* border-radius: 50px; */
-    z-index: 1;
+    z-index: -1;
     /* transform: translateX(60vw); */
     animation: drift 8s linear 0s infinite forwards;
     overflow: visible;
@@ -276,27 +186,27 @@ input:checked ~ #backdrop{
 @media (max-width: 800px) {
     .c1c {
         animation-delay: 0s;
-        animation-duration: 8s;
+        animation-duration: 10s;
     }
     
     .c2c {
-        animation-delay: 1s;
-        animation-duration: 5s;
+        animation-delay: 3s;
+        animation-duration: 8s;
     }
     
     .c3c {
         animation-delay: 4s;
-        animation-duration: 6s;
+        animation-duration: 9s;
     }
     
     .c4c {
         animation-delay: 7s;
-        animation-duration: 6s;
+        animation-duration: 8s;
     }
     
     .c5c {
         animation-delay: 7s;
-        animation-duration: 10s;
+        animation-duration: 12s;
     }
 }
 
@@ -304,27 +214,27 @@ input:checked ~ #backdrop{
 @media (max-width: 480px) {
     .c1c {
         animation-delay: 0s;
-        animation-duration: 5s;
+        animation-duration: 7s;
     }
     
     .c2c {
         animation-delay: 1s;
-        animation-duration: 3s;
+        animation-duration: 6s;
     }
     
     .c3c {
         animation-delay: 3s;
-        animation-duration: 4s;
+        animation-duration: 8s;
     }
     
     .c4c {
         animation-delay: 6s;
-        animation-duration: 6s;
+        animation-duration: 9s;
     }
     
     .c5c {
         animation-delay: 6s;
-        animation-duration: 8s;
+        animation-duration: 10s;
     }
 }
 
@@ -499,11 +409,13 @@ input:checked ~ #backdrop{
 
 
 #copytext {
+    font-family: "Chicle";
     position: fixed;
     color: aliceblue;
-    font-size: 10px;
+    font-size: 1rem;
     letter-spacing: 1px;
     padding: 2px;
     bottom: 1vh;
     right: 1vw;
+    z-index: 5;
 }
