@@ -1,0 +1,509 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Chicle";
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 3px; 
+    overflow: hidden;
+    color: whitesmoke;
+    /* border: 1px dashed black; */
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    /* background-color: skyblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes twillight {
+    0% {background-color: #5c7aff;}
+    /* 50% {background-color: #FFB226;} */
+    100% {background-color: #675cff;}
+
+}
+#backdrop{
+    position: fixed;
+    z-index: 0;
+    background-color: #5c7aff;
+    height: 100vh;
+    width: 100%;
+}
+
+
+#linkBox {
+    width: 400px;
+    /* border: 1px black solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+
+.link {
+    font-family: 'Chicle';
+    margin: 10px auto;
+    max-width: 200px;
+    max-height: 40px;
+    /* border: 1px dashed black; */
+    color: whitesmoke;
+    font-size: 30px;
+    text-decoration: none;
+    text-decoration-color: rgb(166, 196, 231);
+    transition: all 0.2s ease-in-out;
+    z-index: 11;
+}
+
+#aboutBox{
+    max-width: 400px;
+    min-width: 200px;
+    /* border: 1px dashed black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: visible;
+    z-index: 10;
+}
+
+#aboutText{
+    width: 200px;
+    /* border: 1px dotted black; */
+    overflow: visible;
+}
+
+.info{
+    font-family: "Anaheim";
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    opacity: 0;
+    max-height: 0;
+    margin: 0px auto;
+    width: 100%;
+    /* border: 1px dashed black; */
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+    z-index: 11;
+    overflow: visible;
+}
+
+#whoami{
+    font-weight: 500;
+    letter-spacing: 0px;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+#projectsBox {
+    width: 200px;
+    max-height: 40px;
+    /* border: 1px dashed black; */
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.4s ease-in-out, max-height 0.5s ease-in-out, color 0.2s ease-in-out;
+    overflow: visible;
+    z-index: 10;
+}
+
+.hiddenLink {
+    font-family: 'Anaheim';
+    font-size: 20px;
+    font-weight: 500;    
+    /* border: 1px dashed black; */
+    opacity: 0;
+    max-height: 0;
+    margin: 10px auto;
+    padding-left: 20px;
+    width: 100%;
+    /* ^^ Changing width to 100% will keep left justified, otherwise remove left padding = centered */
+    overflow: hidden;
+    text-decoration: none;
+    transition: opacity 0.2s ease-in-out, max-height 0.5s ease-in-out;
+    z-index: 11;
+}
+
+#project1{
+    margin-top: 12px;
+}
+
+input{
+    display: none;
+    position: fixed;
+    z-index: 5;
+}
+
+input:checked ~ #backdrop{
+    animation-name: twillight;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+#aboutToggle:checked ~ 
+#linkBox .info{
+    opacity: 1;
+    max-height: 200px;
+    overflow: visible;
+}
+
+#projectsToggle:checked ~ 
+#linkBox #projectsBox{
+    max-height: 200px;
+}
+
+#projectsToggle:checked ~ 
+#linkBox .hiddenLink{
+    opacity: 1;
+    max-height: 20px;
+    overflow: visible;
+    /* padding-top: 4px; */
+}
+@media (pointer: fine) {
+    .hiddenLink:hover,
+    .link:hover {
+        color: rgb(0, 2, 102);
+        text-decoration-color: rgb(0, 2, 102);
+    }
+}
+
+@media (pointer: coarse) {
+    #aboutToggle:checked ~ #linkBox #aboutText{
+        color: rgb(0, 2, 102);
+    }
+    #projectsToggle:checked ~ #linkBox #projectsBox{
+        color: rgb(0, 2, 102);
+    }
+}
+
+/* 
+#aboutToggle:checked ~ #linkBox #aboutText{
+    color: rgb(0, 2, 102);
+} */
+
+@keyframes drift {
+    0% {
+        /* transform: translateX(calc(50vw + 100px)); */
+        /* transform: translateX(50vw); */
+        left: 100%;
+    }
+    100% {
+        /* transform: translateX(calc(-50vw - 100px)); */
+        /* transform: translateX(-50vw); */
+        left: 0%;
+    }
+}
+
+@keyframes cloudColors {
+    0% {opacity: 0%; background-color: aliceblue;}
+    10% {opacity: 100%;}
+    /* 50% {background-color: gray;} */
+    90% {opacity: 100%;}
+    100% {opacity: 0%; background-color: honeydew;}
+    /* 0% {background-color: aliceblue;}
+    100% {background-color: honeydew;} */
+}
+
+.cloud {
+    position: fixed;
+    min-width: 50px;
+    min-height: 25px;
+    width: 10%;
+    height: 5%;
+    max-width: 100px;
+    max-height: 50px;
+
+    /* background-color: aliceblue; */
+    /* border: black solid ; */
+    /* border-radius: 50px; */
+    z-index: 1;
+    /* transform: translateX(60vw); */
+    animation: drift 8s linear 0s infinite forwards;
+    overflow: visible;
+}
+
+.cloudlet {
+    position: absolute;
+    /* border: black solid 1px; */
+    opacity: 0%;
+    border-radius: 25px;
+    background-color: aliceblue;
+    animation: cloudColors 8s linear 0s infinite both;
+}
+
+
+/* Cloud animation times (viewport width dependant) */
+
+/* Large screens (pc) */
+.c1c {
+    animation-delay: 0s;
+    animation-duration: 12s;
+}
+
+.c2c {
+    animation-delay: 3s;
+    animation-duration: 9s;
+}
+
+.c3c {
+    animation-delay: 6s;
+    animation-duration: 10s;
+}
+
+.c4c {
+    animation-delay: 9s;
+    animation-duration: 10s;
+}
+
+.c5c {
+    animation-delay: 9s;
+    animation-duration: 14s;
+}
+
+/* Medium screens (tablet) */
+/* @media (max-width: 768px) { */
+@media (max-width: 800px) {
+    .c1c {
+        animation-delay: 0s;
+        animation-duration: 8s;
+    }
+    
+    .c2c {
+        animation-delay: 1s;
+        animation-duration: 5s;
+    }
+    
+    .c3c {
+        animation-delay: 4s;
+        animation-duration: 6s;
+    }
+    
+    .c4c {
+        animation-delay: 7s;
+        animation-duration: 6s;
+    }
+    
+    .c5c {
+        animation-delay: 7s;
+        animation-duration: 10s;
+    }
+}
+
+/* Small Screens (phone) */
+@media (max-width: 480px) {
+    .c1c {
+        animation-delay: 0s;
+        animation-duration: 5s;
+    }
+    
+    .c2c {
+        animation-delay: 1s;
+        animation-duration: 3s;
+    }
+    
+    .c3c {
+        animation-delay: 3s;
+        animation-duration: 4s;
+    }
+    
+    .c4c {
+        animation-delay: 6s;
+        animation-duration: 6s;
+    }
+    
+    .c5c {
+        animation-delay: 6s;
+        animation-duration: 8s;
+    }
+}
+
+
+
+/* Cloud 1 */
+
+#c1 {
+    top: 40%;
+}
+
+#c1_1 {
+    top: 40%;
+    width: 100%;
+    height: 40%;
+}
+
+#c1_2 {
+    top: 20%;
+    left: 20%;
+    width: 70%;
+    height: 40%;
+}
+
+#c1_3 {
+    top: 0%;
+    left: 55%;
+    width: 25%;
+    height: 40%;
+}
+
+/* Cloud 2 */
+
+#c2 {
+    top: 10%;
+}
+
+#c2_1 {
+    top: 25%;
+    left: 30%;
+    width: 70%;
+    height: 45%;
+}
+
+#c2_2 {
+    top: 40%;
+    left: 0%;
+    width: 70%;
+    height: 45%;
+}
+
+#c2_3 {
+    top: 65%;
+    left: 50%;
+    width: 25%;
+    height: 25%;
+}
+
+#c2_4 {
+    top: 10%;
+    left: 60%;
+    width: 30%;
+    height: 30%;
+}
+
+/* Cloud 3 */
+
+#c3 {
+    top: 20%;
+}
+
+#c3_1 {
+    width: 50%;
+    height: 30%;
+    top: 50%;
+    left: 0%;
+}
+
+#c3_2 {
+    width: 40%;
+    height: 30%;
+    top: 30%;
+    left: 20%;
+}
+
+#c3_3 {
+    width: 60%;
+    height: 30%;
+    top: 5%;
+    left: 30%;
+}
+
+#c3_4 {
+    width: 50%;
+    height: 25%;
+    top: 15%;
+    left: 10%;
+}
+
+#c3_5 {
+    width: 22%;
+    height: 25%;
+    top: 70%;
+    left: 70%
+}
+
+/* Cloud 4 */
+
+#c4 {
+    top: 60%;
+}
+
+#c4_1 {
+    top: 40%;
+    width: 90%;
+    height: 40%;
+}
+
+#c4_2 {
+    top: 20%;
+    width: 30%;
+    height: 50%;
+    left: 10%
+}
+
+#c4_3 {
+    top: 20%;
+    width: 30%;
+    height: 40%;
+    left: 50%
+}
+
+#c4_4 {
+    top: 10%;
+    width: 40%;
+    height: 45%;
+    left: 30%
+}
+
+/* Cloud 5 */
+
+#c5 {
+    top: 90%;
+}
+
+#c5_1 {
+    top: 60%;
+    width: 80%;
+    height: 40%;
+}
+
+#c5_2 {
+    top: 40%;
+    width: 60%;
+    height: 40%;
+    left: 30%
+}
+
+#c5_3 {
+    top: 20%;
+    width: 60%;
+    height: 40%;
+    left: 50%
+}
+
+#c5_4 {
+    top: 55%;
+    width: 40%;
+    height: 50%;
+    left: 60%
+}
+
+
+#copytext {
+    position: fixed;
+    color: aliceblue;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 2px;
+    bottom: 1vh;
+    right: 1vw;
+}
