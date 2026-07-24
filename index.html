@@ -4,57 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Folio Home</title>
+    <!-- FONT: Chicle -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&family=Chicle&display=swap" rel="stylesheet">
+    <!-- FONT: DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheet: -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="backdrop">
-    <div id="c1" class="cloud c1c">
-        <div id="c1_1" class="cloudlet c1c"></div>
-        <div id="c1_2" class="cloudlet c1c"></div>
-        <div id="c1_3" class="cloudlet c1c"></div>
-    </div>
-    <div id="c2" class="cloud c2c">
-        <div id="c2_1" class="cloudlet c2c"></div>
-        <div id="c2_2" class="cloudlet c2c"></div>
-        <div id="c2_3" class="cloudlet c2c"></div>
-        <div id="c2_4" class="cloudlet c2c"></div>
-    </div>
-    <div id="c3" class="cloud c3c">
-        <div id="c3_1" class="cloudlet c3c"></div>
-        <div id="c3_2" class="cloudlet c3c"></div>
-        <div id="c3_3" class="cloudlet c3c"></div>
-        <div id="c3_4" class="cloudlet c3c"></div>
-        <div id="c3_5" class="cloudlet c3c"></div>
-    </div>
-    <div id="c4" class="cloud c4c">
-        <div id="c4_1" class="cloudlet c4c"></div>
-        <div id="c4_2" class="cloudlet c4c"></div>
-        <div id="c4_3" class="cloudlet c4c"></div>
-        <div id="c4_4" class="cloudlet c4c"></div>
-    </div>
-    <div id="c5" class="cloud c5c">
-        <div id="c5_1" class="cloudlet c5c"></div>
-        <div id="c5_2" class="cloudlet c5c"></div>
-        <div id="c5_3" class="cloudlet c5c"></div>
-        <div id="c5_4" class="cloudlet c5c"></div>
-    </div>
-    </div>
-        <div id="page">
-        <div id="pageheader">
-            <h1>El Fry's<br>Portfolio</h1>
-            <h2>projects</h2>  
-            <h2>map</h2>
-            <h2>about</h2>
+        <div id="c1" class="cloud c1c">
+            <div id="c1_1" class="cloudlet c1c"></div>
+            <div id="c1_2" class="cloudlet c1c"></div>
+            <div id="c1_3" class="cloudlet c1c"></div>
         </div>
-        <h2>Recent Projects</h2>
+        <div id="c2" class="cloud c2c">
+            <div id="c2_1" class="cloudlet c2c"></div>
+            <div id="c2_2" class="cloudlet c2c"></div>
+            <div id="c2_3" class="cloudlet c2c"></div>
+            <div id="c2_4" class="cloudlet c2c"></div>
+        </div>
+        <div id="c3" class="cloud c3c">
+            <div id="c3_1" class="cloudlet c3c"></div>
+            <div id="c3_2" class="cloudlet c3c"></div>
+            <div id="c3_3" class="cloudlet c3c"></div>
+            <div id="c3_4" class="cloudlet c3c"></div>
+            <div id="c3_5" class="cloudlet c3c"></div>
+        </div>
+        <div id="c4" class="cloud c4c">
+            <div id="c4_1" class="cloudlet c4c"></div>
+            <div id="c4_2" class="cloudlet c4c"></div>
+            <div id="c4_3" class="cloudlet c4c"></div>
+            <div id="c4_4" class="cloudlet c4c"></div>
+        </div>
+        <div id="c5" class="cloud c5c">
+            <div id="c5_1" class="cloudlet c5c"></div>
+            <div id="c5_2" class="cloudlet c5c"></div>
+            <div id="c5_3" class="cloudlet c5c"></div>
+            <div id="c5_4" class="cloudlet c5c"></div>
+        </div>
+    </div>
+    <div id="page">
+        <div id="pageheader">
+            <!-- <h1>El Fry's<br>Portfolio</h1> -->
+            <h1 id="logo">El Tectonita</h1>
+            <h2 class="headerlink">projects</h2>  
+            <h2 class="headerlink">map</h2>
+            <h2 class="headerlink">about</h2>
+        </div>
+        <h2 class="chicle">~ Recent Projects ~</h2>
         <div class="projectBox">
-            <div class="tile"><img src="OmeoSchist.JPG" alt="Cassilis Schists", class="image"></div>
-            <div class="tile"><img src="DayHill.JPG" alt="Day Hill Omeo", class="image"></div>
-            <div class="tile"><img src="Brunton.JPG" alt="Buchan Compass", class="image"></div>
-            <div class="tile"><img src="Buchan Rift.JPG" alt="Murrindal Synclinorium", class="image"></div>
+            <div class="tile" id="Omeo">
+                <img src="OmeoSchist.JPG" alt="Cassilis Schists">
+                <div class="textbox">
+                    <h3>Omeo Metamorphic Transect</h3>
+                    Mapping of metamorphic mineral isograds betweeen Omeo and Switft's Creek, through one of Victoria's historic gold mining regions. 
+                    <!-- Mapping of mineral isograds the nature and timing of regional deformation and high temperature-low pressure metamorphism. -->
+                    <!-- <br><br> -->
+                    <!-- <a href=""></a> -->
+                </div>
+            </div>
+            <div class="tile" id="DayHill">
+                <img src="Rhyolite.JPG" alt="Day Hill Omeo">
+                <div class="textbox">
+                    <h3>Day Hill Volcanics</h3>
+                    Investigating the relationship between volcaniclastic rocks and a syenite intrusion at Day Hill in Omeo, VIC.  
+                </div>
+            </div>
+            <div class="tile" id="Buchan">
+                <img src="Brunton.JPG" alt="Buchan Compass">
+                <div class="textbox">
+                    
+                </div>
+            </div>
+            <div class="tile" id="Murrindal">
+                <img src="Murrindal.JPEG" alt="Murrindal looking South">
+                <div class="textbox">
+                    
+                </div>
+            </div>
         </div>
         
     

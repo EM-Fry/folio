@@ -1,3 +1,8 @@
+/* ------------------------------- */
+/*        LARGE CONTAINERS         */
+/* ------------------------------- */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,101 +11,159 @@
     /* border: 1px dashed black; */
 }
 
-html, body{
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+.dm-sans {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    /* weight from 100-1000 */
+    font-weight: 400; 
+    font-style: normal;
 }
 
-body {
+.itallics{
+    font-style: italic;
+}
+
+.chicle{
+    font-family: "Chicle";
+    letter-spacing: 0.1rem;
+}
+
+body{
+    width: 100vw;
+    /* height: 100vh; */
+    overflow-x: hidden;
+    /* overflow-y: auto; */
+    /* position: sticky; */
     display: flex;
     justify-content: center;
     /* align-items: center; */
+    background-color: #171e3d;
+    
 }
 
-
-
-
 #page {
-    margin: 2rem;
-    width: 800px;
-    background-color: rgb(174, 174, 187);
+    overflow: auto;
+    /* margin: 2rem; */
+    width: 60%;
+    background-color: rgb(220, 220, 220);
     outline: medium solid rgb(100, 100, 100);
     padding: 2rem;
     color: black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    & h2{
-        text-align: center;
-    }
-}
-
-.projectBox {
-    display: flex;
-    margin: 1rem 1rem;
-}
-
-.tile{
-    display: flex;
-    width: 170px;
-    margin: 2px;
-    /* border: thin black; */
-    background-color: black;
-    & :hover{
-        opacity: 0.5;
-    }
-}
-
-.image {
-    width: 100%;
-    /* backface-visibility: hidden; */
+    /* font-weight: 600;  */
 }
 
 
+
+/* -------------------------- */
+/*        PAGE HEADER         */
+/* -------------------------- */
 
 #pageheader {
     margin: -2rem;
     margin-bottom: 2rem;
     padding: 1rem 1rem 1rem 1rem;
 
-    width: 800px;
+    /* width: 100%; */
     min-height: 6rem;
     background-color: black;
     align-items: center;
     display: flex;
     font-family: "Chicle";
 
-    & * {
-        /* flex: 1; */
+    .headerlink {
+        flex: 1;
         /* border: thin solid rgb(100,100,100,0.4); */
-        color: rgb(159, 159, 209);
+        color: skyblue;
         text-align: center;
         /* width: 15%; */
-        padding: 0 4rem;
+        padding: 0;
         font-family: "Chicle";
         letter-spacing: 0.1em; 
+        font-size: 1.5rem;
     }
-    
+    #logo{
+        flex: 2;
+        color: gold;
+    }
 }
 
 #pageheader h1{
     color: rgb(150, 150, 255);
     font-style: italic;
+    font-size: 2rem;
     /* width: 20%; */
     padding: 0 4rem 0 1rem;
     /* flex: 3; */
 }
 
-/* #pageheader{} */
 
 
+/* -------------------------- */
+/*        PAGE CONTENTS       */
+/* -------------------------- */
+
+#page h2{
+    /* padding: 0 10rem; */
+    justify-self: center;
+    font-size: 2em;
+}
+
+.projectBox {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem;
+}
+
+.tile{
+    display: flex;
+    overflow: hidden;
+    border: solid #171e3d;
+    height: 10rem;
+    margin: 0.5rem;
+    background-color: rgb(100, 100, 100);
+    /* & :hover {
+        opacity: 0.5;
+    }  */
+    /*  --- IMAGE STYLES ---     */
+    img{
+        align-self: center;
+        height: 130%;
+    }
+}
+
+/*  --- TEXT STYLES  ---     */
+.textbox{
+    padding: 2%;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    /* weight from 100-1000 */
+    font-weight: 400; 
+    font-style: normal;
+    color: rgb(230, 230, 230);
+    /* text-align: justify; */
+    font-size: 1.1em;
+    /* letter-spacing: 0.1rem; */
+    h3{
+        color: skyblue;
+    }
+}
+
+
+
+
+
+
+/* --------------------- */
+/*       Backdrop        */
+/* --------------------- */
 
 #backdrop{
-    position: fixed;
-    z-index: -1;
-    background-color: #171e3d;    
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
+    /* position: fixed; */
+    /* z-index: -1; */
+    /* height: 100vh; */
+    /* width: 110%; */
+    /* overflow: hidden; */
+    background-color: teal;
 }
 
 @keyframes twillight {
@@ -123,7 +186,9 @@ input:checked ~ #backdrop{
     animation-timing-function: linear;
 }
 
-
+/* ------------------------------ */
+/* -------- CLOUD STYLES -------- */
+/* ------------------------------ */
 
 @keyframes drift {
     0% {
@@ -178,7 +243,7 @@ input:checked ~ #backdrop{
 
 /* Cloud animation times (viewport width dependant) */
 
-/* Large screens (pc) */
+/* Large screens */
 .c1c {
     animation-delay: 0s;
     animation-duration: 12s;
@@ -204,7 +269,7 @@ input:checked ~ #backdrop{
     animation-duration: 14s;
 }
 
-/* Medium screens (tablet) */
+/* Medium screens */
 /* @media (max-width: 768px) { */
 @media (max-width: 800px) {
     .c1c {
@@ -233,9 +298,14 @@ input:checked ~ #backdrop{
     }
 }
 
-/* Small Screens (phone) */
+/* Small Screens */
 @media (max-width: 480px) {
-    .c1c {
+
+    #page {
+        width: 100%;
+    }
+
+    /* .c1c {
         animation-delay: 0s;
         animation-duration: 7s;
     }
@@ -258,7 +328,7 @@ input:checked ~ #backdrop{
     .c5c {
         animation-delay: 6s;
         animation-duration: 10s;
-    }
+    } */
 }
 
 
