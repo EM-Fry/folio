@@ -59,7 +59,8 @@ body{
 /* -------------------------- */
 
 #pageheader {
-    margin: -2rem;
+    margin: -2rem; 
+    /* Margin at -2rem to span the whole page */
     margin-bottom: 2rem;
     padding: 1rem 1rem 1rem 1rem;
 
@@ -102,9 +103,19 @@ body{
 /*        PAGE CONTENTS       */
 /* -------------------------- */
 
+#banner{
+    margin: -2rem -2rem 1rem; 
+    /* margin Top, sides, bottom */
+    img{
+        align-self: center;
+        width: 100%;
+        height: fit-content;
+    }
+}
+
 #page h2{
     /* padding: 0 10rem; */
-    justify-self: center;
+    text-align: center;
     font-size: 2em;
 }
 
