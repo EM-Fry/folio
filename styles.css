@@ -53,6 +53,7 @@ body{
     overflow: auto;
     /* margin: 2rem; */
     width: 60%;
+    min-width: 600px;
     background-color: hsl(0, 0%, 70%);
     /* background-color: rgb(40, 40, 40); */
     outline: medium solid rgb(100, 100, 100);
@@ -130,24 +131,24 @@ body{
 
 .tile{
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* border: solid #171e3d; */
-    height: 8rem;
-    margin: 0.5rem;
+    /* height: 8rem; */
+    margin: 0.5rem -0.5rem;
     /* background-color: rgb(100, 100, 100); */
     /* & :hover {
         opacity: 0.5;
     }  */
     /*  --- IMAGE STYLES ---     */
     img{
-        align-self: center;
-        height: 130%;
+        /* align-self: center; */
+        height: 9rem;
     }
 }
 
 /*  --- TEXT STYLES  ---     */
 .textbox{
-    padding: 1%;
+    padding: 0% 2%;
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     /* weight from 100-1000 */
@@ -155,7 +156,7 @@ body{
     font-style: normal;
     /* color: rgb(230, 230, 230); */
     /* text-align: justify; */
-    /* font-size: 1.1em; */
+    font-size: 0.9em;
     /* letter-spacing: 0.1rem; */
     h3{
         /* color: skyblue; */
