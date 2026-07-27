@@ -1,13 +1,12 @@
-/* ------------------------------- */
-/*        LARGE CONTAINERS         */
-/* ------------------------------- */
-
+/* --------------------------------- */
+/*        INITIAL STATES AND         */
+/*          LARGE CONTAINERS         */
+/* --------------------------------- */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* color: rgb(225, 225, 225); */
     /* border: 1px dashed black; */
 }
 
@@ -19,14 +18,22 @@
     font-style: normal;
 }
 
-.itallics{
-    font-style: italic;
-}
-
 .chicle{
     font-family: "Chicle";
     letter-spacing: 0.1rem;
 }
+
+.itallics{
+    font-style: italic;
+}
+
+@property --body-color {
+    syntax: "<color>";
+    inherits: false;
+    /* initial-value: rgb(200, 200, 200); */
+    initial-value: rgb(35, 35, 35);
+}
+
 
 body{
     width: 100vw;
@@ -37,7 +44,8 @@ body{
     display: flex;
     justify-content: center;
     /* align-items: center; */
-    background-color: #171e3d;
+    background-color: #1b223e;
+    /* background-color: #656468; */
     
 }
 
@@ -45,11 +53,11 @@ body{
     overflow: auto;
     /* margin: 2rem; */
     width: 60%;
-    background-color: rgb(220, 220, 220);
+    background-color: hsl(0, 0%, 70%);
+    /* background-color: rgb(40, 40, 40); */
     outline: medium solid rgb(100, 100, 100);
     padding: 2rem;
-    color: black;
-    /* font-weight: 600;  */
+    color: var(--body-color);
 }
 
 
@@ -75,26 +83,21 @@ body{
         flex: 1;
         /* border: thin solid rgb(100,100,100,0.4); */
         color: skyblue;
+        /* color: rgb(150, 150, 255); */
+        font-style: italic;
         text-align: center;
         /* width: 15%; */
         padding: 0;
         font-family: "Chicle";
         letter-spacing: 0.1em; 
         font-size: 1.5rem;
+        
     }
     #logo{
         flex: 2;
         color: gold;
+        padding: 0 4rem 0 1rem;
     }
-}
-
-#pageheader h1{
-    color: rgb(150, 150, 255);
-    font-style: italic;
-    font-size: 2rem;
-    /* width: 20%; */
-    padding: 0 4rem 0 1rem;
-    /* flex: 3; */
 }
 
 
@@ -128,10 +131,10 @@ body{
 .tile{
     display: flex;
     overflow: hidden;
-    border: solid #171e3d;
-    height: 10rem;
+    /* border: solid #171e3d; */
+    height: 8rem;
     margin: 0.5rem;
-    background-color: rgb(100, 100, 100);
+    /* background-color: rgb(100, 100, 100); */
     /* & :hover {
         opacity: 0.5;
     }  */
@@ -144,18 +147,19 @@ body{
 
 /*  --- TEXT STYLES  ---     */
 .textbox{
-    padding: 2%;
+    padding: 1%;
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     /* weight from 100-1000 */
-    font-weight: 400; 
+    font-weight: 500; 
     font-style: normal;
-    color: rgb(230, 230, 230);
+    /* color: rgb(230, 230, 230); */
     /* text-align: justify; */
-    font-size: 1.1em;
+    /* font-size: 1.1em; */
     /* letter-spacing: 0.1rem; */
     h3{
-        color: skyblue;
+        /* color: skyblue; */
+        text-transform: uppercase;
     }
 }
 
@@ -167,15 +171,6 @@ body{
 /* --------------------- */
 /*       Backdrop        */
 /* --------------------- */
-
-#backdrop{
-    /* position: fixed; */
-    /* z-index: -1; */
-    /* height: 100vh; */
-    /* width: 110%; */
-    /* overflow: hidden; */
-    background-color: teal;
-}
 
 @keyframes twillight {
     0% {background-color: #1e274d;}
@@ -190,7 +185,7 @@ input{
     z-index: 5;
 }
 
-input:checked ~ #backdrop{
+input:checked ~ body{
     animation-name: twillight;
     animation-duration: 1s;
     animation-fill-mode: both;
