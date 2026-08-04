@@ -1,0 +1,122 @@
+/* --------------------------------- */
+/*        INITIAL STATES AND         */
+/*          LARGE CONTAINERS         */
+/* --------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px dashed black; */
+}
+
+.dm-sans {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    /* weight from 100-1000 */
+    font-weight: 400; 
+    font-style: normal;
+}
+
+.chicle{
+    font-family: "Chicle";
+    letter-spacing: 0.1rem;
+}
+
+.itallics{
+    font-style: italic;
+}
+
+@property --body-color {
+    syntax: "<color>";
+    inherits: false;
+    /* initial-value: rgb(200, 200, 200); */
+    initial-value: rgb(35, 35, 35);
+}
+
+
+body{
+    width: 100vw;
+    /* height: 100vh; */
+    overflow-x: hidden;
+    /* overflow-y: auto; */
+    /* position: sticky; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    background-color: #060c22;
+    /* background-color: #656468; */
+    
+}
+
+#page {
+    overflow: auto;
+    /* margin: 2rem; */
+    width: 60%;
+    min-width: 600px;
+    background-color: hsl(0, 0%, 70%);
+    /* background-color: rgb(40, 40, 40); */
+    outline: medium solid rgb(100, 100, 100);
+    padding: 2rem;
+    color: var(--body-color);
+}
+
+
+
+/* -------------------------- */
+/*        PAGE HEADER         */
+/* -------------------------- */
+
+#pageheader {
+    margin: -2rem; 
+    /* Margin at -2rem to span the whole page */
+    margin-bottom: 2rem;
+    padding: 1rem 1rem 1rem 1rem;
+
+    /* width: 100%; */
+    min-height: 6rem;
+    background-color: black;
+    align-items: center;
+    display: flex;
+    font-family: "Chicle";
+
+    .headerlink {
+        flex: 1;
+        /* border: thin solid rgb(100,100,100,0.4); */
+        color: skyblue;
+        /* color: rgb(150, 150, 255); */
+        font-style: italic;
+        text-align: center;
+        /* width: 15%; */
+        padding: 0;
+        font-family: "Chicle";
+        letter-spacing: 0.1em; 
+        font-size: 1.5rem;
+        
+    }
+    #logo{
+        flex: 2;
+        color: gold;
+        padding: 0 4rem 0 1rem;
+        
+    }
+}
+
+
+/* -------------------------- */
+/*        PAGE CONTENTS       */
+/* -------------------------- */
+
+#banner {
+    margin: -2rem -2rem 1rem; 
+    /* margin Top, sides, bottom */
+    outline: double red;
+    justify-items: center;
+    align-items: center;
+}
+
+#page h1{
+    text-align: center;
+    font-size: 2em;
+}
+
