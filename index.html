@@ -57,13 +57,69 @@
             <h2 class="headerlink">about</h2>
         </div>
         
-        <div id="banner">
-            <img src="Images/Banner.JPG" alt="Photo of me, doing geology">
+        <div class="banner" id="topBanner">
+            <!-- <img src="Images/Banner.JPG" alt="Photo of me, doing geology"> -->
+            <div id="intro">
+                <h2 id="hello">El Fry's <br>Project Folio</h2>
+                <p>I'm a geology student at Monash Universiy with a keen interest in mapping and structural geo. This site displays a few projects of mine.</p>
+            </div>
         </div>
-        <div id="intro"><h2 class="chicle">Hey there, I'm El!</h2>
-        <h3 class="dm-sans">I'm a field-focused young geologist, with a keen interest in geological mapping. I'm studying geology at Monash Universiy in Melbourne. This site displays a few projects of mine, completed either solo or as a part of my studies.</h3></div>
+        
         <br>
-        <h2 class="chicle">~ Recent Projects ~</h2>
+        <!-- <h2 class="chicle">~ Recent Projects ~</h2> -->
+        
+        <div class="banner">
+            <h1 style="background-image: url(Images/Eldee/EldeeBanner.JPG);">
+                Eldee Station Field Mapping</h1>
+            <p>Two weeks on a remote station near Broken Hill, producing a detailed map and cross section of a highly deformed pre-Cambrian terrane. </p>
+        </div>
+        <div class="gallery">
+            <div class="menu">
+                <input type="image" src="Images/Eldee/EldeeMap.JPG" alt="My mapboard in the field with geological units and structural data shown. 
+                    This is an unfinished copy, as our final maps can't be returned for 12 months. 
+                    The rock units mapped were Interbedded Metapsammite & Metapelite (in blue), Retrogressed Amphibolite (in green), Felsic Gneiss (in red), Biotite Gneiss (in purple), and pegmatite (in yellow). 
+                    Form lines for several generations of foliation are also plotted." onclick="displayImage(this, 'enlarged1', 'desc1')">
+                <input type="image" src="Images/Eldee/EldeeMappingCropped.JPG" alt="Mapping in the SE section of the project area, which covers about 8 square km in total." onclick="displayImage(this, 'enlarged1', 'desc1')">
+                <input type="image" src="Images/Eldee/IMG_1018.JPG" alt="The contrasting colour and relief of different rock units is visible here, as is the complex nature of their folding. Here the lighter rocks are pegmatite, which also stand out on the further ridge.
+                " onclick="displayImage(this, 'enlarged1', 'desc1')">
+                <input type="image" src="Images/Eldee/IMG_1022_Crop.JPG" alt="An asymmetrical S-type fold in crenellated metapelite. Overprinting of at least 3 deformation events was visible at this outcrop.
+                " onclick="displayImage(this, 'enlarged1', 'desc1')">
+                <input type="image" src="Images/Eldee/IMG_1017.JPG" alt="In this face, spaced dissolution cleavage (parallel to pencil) overprints two prior foliations which are defined by separately oriented sillimanite generations. 
+                " onclick="displayImage(this, 'enlarged1', 'desc1')">
+                <input type="image" src="Images/Eldee/HoldingMap.JPG" alt="" onclick="displayImage(this, 'enlarged1', 'desc1')">
+            </div>
+            <div class="menuchoice">
+                <img src="Images/Eldee/EldeeMap.JPG" alt="" id="enlarged1">
+                <p id="desc1">My mapboard in the field with geological units and structural data shown. 
+                    This is an unfinished copy, as our final maps can't be returned for 12 months. 
+                    The rock units mapped were Interbedded Metapsammite & Metapelite (in blue), Retrogressed Amphibolite (in green), Felsic Gneiss (in red), Biotite Gneiss (in purple), and pegmatite (in yellow). 
+                    Form lines for several generations of foliation are also plotted.
+                </p>
+            </div>
+        </div>
+
+        <div class="banner">
+            <h1 style="background-image: url(Images/Buchan/Murrindal\ Banner.jpeg);">
+                Buchan Field Mapping</h1>
+            <p>A week mapping folded rift sediments in Murrindal and Buchan, focusing on precise mapping and prediction of subsurface geology.</p>
+        </div>
+        <div class="gallery">
+            <div class="menu">
+                <!-- <input type="image" src="Images/Eldee/IMG_1018.JPG" alt="" onclick="displayImage(this, 'enlarged1', 'desc1')"> -->
+            </div>
+            <div class="menuchoice">
+
+            </div>
+        </div>
+        <div id="bottomdiv"></div>
+        
+
+
+
+
+
+        <!-- ------------------------------- -->
+        <!-- NOT CURRENTLY USING: projectBox -->
         <div class="projectBox">
             <div class="tile" id="DayHill">
                 <img src="Images\Eldee\IMG_0968.JPG" alt="Eldee Station, Broken Hill">
@@ -98,8 +154,7 @@
                 </div>
             </div>
         </div>
-        
-    
+        <!-- ------------------------------- -->
     </div>
 
 

@@ -8,3 +8,12 @@
 // }
 
 // window.addEventListener('resize', restartAnimation);
+
+
+function displayImage(img, target, desc) {
+    let imageframe = document.getElementById(target);
+    imageframe.src = img.src;
+    let description = document.getElementById(desc);
+    description.innerHTML = img.alt;
+    
+}
